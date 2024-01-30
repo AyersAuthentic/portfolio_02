@@ -47,54 +47,33 @@
       href="{{ url_for('static', filename='css/style.css') }}"
       rel="stylesheet"
     />
-
-    <!-- =======================================================
-  * Template Name: MyPortfolio
-  * Updated: Jan 09 2024 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
   </head>
 
   <body>
     <!-- ======= Navbar ======= -->
     <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
       <div class="container py-2 py-md-5">
-        <div class="row align-items-start">
-          <div class="col-md-2">
+        <div class="row align-items-center">
+          <div class="col-md-3">
             <ul class="custom-menu">
-              <li><a href="{{ url_for('index') }}">Home</a></li>
-              <li class="active">
-                <a href="{{ url_for('about') }}">About Me</a>
-              </li>
-              <li><a href="{{ url_for('services') }}">Services</a></li>
-              <li><a href="{{ url_for('works') }}">Works</a></li>
+              <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
+              <li><a href="{{ url_for('about') }}">About Me</a></li>
+              <li><a href="{{ url_for('services') }}">Skills</a></li>
+              <li><a href="{{ url_for('works') }}">Projects</a></li>
               <li><a href="{{ url_for('contact') }}">Contact</a></li>
             </ul>
           </div>
-          <div class="col-md-6 d-none d-md-block mr-auto">
+          <div class="col-md-5 d-none d-md-block mr-auto">
             <div class="tweet d-flex">
-              <span class="bi bi-twitter text-white mt-2 mr-3"></span>
               <div>
-                <p>
+                <h1 id="tagline">
                   <em
-                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quisquam necessitatibus incidunt ut officiis explicabo
-                    inventore. <br />
-                    <a href="#">t.co/v82jsk</a></em
+                    >Engineering Intelligent Solutions from Complex Data
+                    Landscapes.</em
                   >
-                </p>
+                </h1>
               </div>
             </div>
-          </div>
-          <div class="col-md-4 d-none d-md-block">
-            <h3>Hire Me</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              necessitatibus incidunt ut officiisexplicabo inventore. <br />
-              <a href="#">myemail@gmail.com</a>
-            </p>
           </div>
         </div>
       </div>
@@ -117,149 +96,40 @@
     <main id="main">
       <section class="section pb-5">
         <div class="container">
-          <div class="row mb-5 align-items-end">
-            <div class="col-md-6" data-aos="fade-up">
+          <div class="row align-items-start">
+            <!-- Image on the left for larger screens -->
+            <div class="col-lg-5" data-aos="fade-up">
+              <img
+                src="{{ url_for('static', filename='img/kevin_1.png') }}"
+                alt="Image"
+                class="img-fluid about-img"
+              />
+            </div>
+            <!-- Text on the right for larger screens -->
+            <div class="col-lg-7 float-start about-text" data-aos="fade-up">
               <h2>About Me</h2>
-              <p class="mb-0">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam necessitatibus incidunt ut officiis explicabo
-                inventore.
-              </p>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-4 ml-auto order-2" data-aos="fade-up">
-              <h3 class="h3 mb-4">Skills</h3>
-              <ul class="list-unstyled">
-                <li class="mb-3">
-                  <div class="d-flex mb-1">
-                    <strong>WordPress</strong>
-                    <span class="ml-auto">80%</span>
-                  </div>
-                  <div class="progress custom-progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style="width: 80%"
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </li>
-                <li class="mb-3">
-                  <div class="d-flex mb-1">
-                    <strong>Photoshop</strong>
-                    <span class="ml-auto">96%</span>
-                  </div>
-                  <div class="progress custom-progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style="width: 96%"
-                      aria-valuenow="96"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </li>
-                <li class="mb-3">
-                  <div class="d-flex mb-1">
-                    <strong>HTML5/CSS3</strong>
-                    <span class="ml-auto">99%</span>
-                  </div>
-                  <div class="progress custom-progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style="width: 99%"
-                      aria-valuenow="99"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </li>
-                <li class="mb-3">
-                  <div class="d-flex mb-1">
-                    <strong>Veu</strong>
-                    <span class="ml-auto">87%</span>
-                  </div>
-                  <div class="progress custom-progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style="width: 87%"
-                      aria-valuenow="87"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </li>
-                <li class="mb-3">
-                  <div class="d-flex mb-1">
-                    <strong>Angular</strong>
-                    <span class="ml-auto">85%</span>
-                  </div>
-                  <div class="progress custom-progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style="width: 85%"
-                      aria-valuenow="85"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </li>
-                <li class="mb-3">
-                  <div class="d-flex mb-1">
-                    <strong>React</strong>
-                    <span class="ml-auto">88%</span>
-                  </div>
-                  <div class="progress custom-progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style="width: 88%"
-                      aria-valuenow="88"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-md-7 mb-5 mb-md-0" data-aos="fade-up">
               <p>
-                <img
-                  src="{{ url_for('static', filename='img/img_1.jpg') }}"
-                  alt="Image"
-                  class="img-fluid"
-                />
+                Hi! I'm Kevin, a Machine Learning enthusiast with a Master's in
+                Computer Science from the Georgia Institute of Technology. My
+                academic and project work revolves around data analytics, deep
+                learning, and data engineering, with each project sharpening my
+                ability to innovate and drive technology forward.
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
-                dignissimos delectus minima reprehenderit molestias illo dolorem
-                et, odio!
+                At Georgia Tech, I've tackled complex problems, developing
+                algorithms and systems to turn data into insights and action.
+                This hands-on experience has equipped me with a robust set of
+                skills ready to be applied in a dynamic team environment.
               </p>
               <p>
-                Fuga fugit distinctio delectus iure vitae consequatur excepturi,
-                mollitia, consectetur molestias sapiente rem consequuntur, illum
-                adipisci, sed obcaecati!
+                I'm on the lookout for opportunities where I can put my passion
+                for machine learning and collaborative spirit to work,
+                contributing to impactful technology solutions. Let’s create the
+                future together!
               </p>
               <p>
-                Ex, dolorem qui voluptas reprehenderit provident, ad ipsum iure
-                a consequatur voluptatem incidunt nobis. Vitae reiciendis quae
-                ex.
+                <a href="#" class="readmore" download>Download my Resume</a>
               </p>
-              <p>
-                Optio consectetur culpa nemo, fugit pariatur veniam voluptate
-                laudantium rerum fuga dolor in maiores ea nisi voluptatibus.
-                Minus?
-              </p>
-              <p><a href="#" class="readmore" download>Download my CV</a></p>
             </div>
           </div>
         </div>
@@ -272,15 +142,19 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <p class="mb-1">
-              &copy; Copyright MyPortfolio. All Rights Reserved
-            </p>
+            <i class="bi bi-person-circle"></i>
+            <span>Kevin Ayers</span>
           </div>
           <div class="col-sm-6 social text-md-end">
-            <a href="#"><span class="bi bi-twitter"></span></a>
-            <a href="#"><span class="bi bi-facebook"></span></a>
-            <a href="#"><span class="bi bi-instagram"></span></a>
-            <a href="#"><span class="bi bi-linkedin"></span></a>
+            <a href="https://twitter.com/iamkevinayers"
+              ><span class="bi bi-twitter"></span
+            ></a>
+            <a href="https://github.com/AyersAuthentic"
+              ><span class="bi bi-github"></span
+            ></a>
+            <a href="https://www.linkedin.com/in/kevin-ayers/"
+              ><span class="bi bi-linkedin"></span
+            ></a>
           </div>
         </div>
       </div>

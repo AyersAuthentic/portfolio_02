@@ -41,37 +41,41 @@
   <!-- ======= Navbar ======= -->
   <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
     <div class="container py-2 py-md-5">
-      <div class="row align-items-start">
-        <div class="col-md-2">
+      <div class="row align-items-center">
+        <div class="col-md-3">
           <ul class="custom-menu">
-            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="{{ url_for('about') }}">About Me</a></li>
-            <li><a href="{{ url_for('services') }}">Services</a></li>
-            <li class="active"><a href="{{ url_for('works') }}">Works</a></li>
+            <li><a href="{{ url_for('services') }}">Skills</a></li>
+            <li><a href="{{ url_for('works') }}">Projects</a></li>
             <li><a href="{{ url_for('contact') }}">Contact</a></li>
           </ul>
         </div>
-        <div class="col-md-6 d-none d-md-block  mr-auto">
+        <div class="col-md-5 d-none d-md-block mr-auto">
           <div class="tweet d-flex">
-            <span class="bi bi-twitter text-white mt-2 mr-3"></span>
             <div>
-              <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore. <br> <a href="#">t.co/v82jsk</a></em></p>
+              <h1 id="tagline">
+                <em
+                  >Engineering Intelligent Solutions from Complex Data
+                  Landscapes.</em
+                >
+              </h1>
             </div>
           </div>
         </div>
-        <div class="col-md-4 d-none d-md-block">
-          <h3>Hire Me</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiisexplicabo inventore. <br> <a href="#">myemail@gmail.com</a></p>
-        </div>
       </div>
-
     </div>
   </div>
 
   <nav class="navbar navbar-light custom-navbar">
     <div class="container">
       <a class="navbar-brand" href="{{ url_for('index') }}">MyPortfolio.</a>
-      <a href="#" class="burger" data-bs-toggle="collapse" data-bs-target="#main-navbar">
+      <a
+        href="#"
+        class="burger"
+        data-bs-toggle="collapse"
+        data-bs-target="#main-navbar"
+      >
         <span></span>
       </a>
     </div>
@@ -83,7 +87,7 @@
       <div class="container">
         <div class="row mb-4 align-items-center">
           <div class="col-md-6" data-aos="fade-up">
-            <h2>Work Single Page</h2>
+            <h2>Project Single Page</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.</p>
           </div>
         </div>
@@ -93,7 +97,7 @@
         <div class="container">
           <div class="row align-items-stretch">
             <div class="col-md-8" data-aos="fade-up">
-              <img src="assets/img/img_1_big.jpg" alt="Image" class="img-fluid">
+              <img src="{{ url_for('static', filename='img/robot.webp') }}" alt="Image" class="img-fluid">
             </div>
             <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
               <div class="sticky-content">
@@ -124,42 +128,62 @@
     <!-- ======= Testimonials Section ======= -->
     <section class="section pt-0">
       <div class="container">
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <div
+          class="testimonials-slider swiper"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial">
+                  <img
+                    src="{{ url_for('static', filename='img/Jared_b.jpeg') }}"
+                    alt="Image"
+                    class="img-fluid"
+                  />
+                  <blockquote>
+                    <p>
+                      His expertise in ML is strong, Kevin is always ready to
+                      illuminate even the most tangled concepts. Kevin's
+                      dedication and clear explanations propelled our team
+                      across the finish line, leaving us all immensely
+                      grateful for his contribution.
+                    </p>
+                  </blockquote>
+                  <p>&mdash; Jared Benedict</p>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
 
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial">
-                  <img src="assets/img/person_1.jpg" alt="Image" class="img-fluid">
+                  <img
+                    src="{{ url_for('static', filename='img/Pelley.jpeg') }}"
+                    alt="Image"
+                    class="img-fluid"
+                  />
                   <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
-                      explicabo inventore.</p>
+                    <p>
+                      Kevin is not only a great, knowledgeable teammate, but
+                      also an exceptional technical leader, who always ensured
+                      our milestones were met. Given the opportunity, I would
+                      happily work with Kevin again.
+                    </p>
                   </blockquote>
-                  <p>&mdash; Jean Hicks</p>
+                  <p>&mdash; Jarrod Pelley</p>
                 </div>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial">
-                  <img src="assets/img/person_2.jpg" alt="Image" class="img-fluid">
-                  <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
-                      explicabo inventore.</p>
-                  </blockquote>
-                  <p>&mdash; Chris Stanworth</p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
+            </div>
+            <!-- End testimonial item -->
           </div>
           <div class="swiper-pagination"></div>
         </div>
-
       </div>
-    </section><!-- End Testimonials Section -->
+    </section>
+    <!-- End Testimonials Section -->
 
   </main><!-- End #main -->
 
@@ -168,20 +192,29 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
-          <p class="mb-1">&copy; Copyright MyPortfolio. All Rights Reserved</p>
-          
+          <i class="bi bi-person-circle"></i>
+          <span>Kevin Ayers</span>
         </div>
         <div class="col-sm-6 social text-md-end">
-          <a href="#"><span class="bi bi-twitter"></span></a>
-          <a href="#"><span class="bi bi-facebook"></span></a>
-          <a href="#"><span class="bi bi-instagram"></span></a>
-          <a href="#"><span class="bi bi-linkedin"></span></a>
+          <a href="https://twitter.com/iamkevinayers"
+            ><span class="bi bi-twitter"></span
+          ></a>
+          <a href="https://github.com/AyersAuthentic"
+            ><span class="bi bi-github"></span
+          ></a>
+          <a href="https://www.linkedin.com/in/kevin-ayers/"
+            ><span class="bi bi-linkedin"></span
+          ></a>
         </div>
       </div>
     </div>
   </footer>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a
+    href="#"
+    class="back-to-top d-flex align-items-center justify-content-center"
+    ><i class="bi bi-arrow-up-short"></i
+  ></a>
 
   <!-- Vendor JS Files -->
   <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>

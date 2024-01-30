@@ -61,38 +61,27 @@
     <!-- ======= Navbar ======= -->
     <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
       <div class="container py-2 py-md-5">
-        <div class="row align-items-start">
-          <div class="col-md-2">
+        <div class="row align-items-center">
+          <div class="col-md-3">
             <ul class="custom-menu">
-              <li><a href="{{ url_for('index') }}">Home</a></li>
+              <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
               <li><a href="{{ url_for('about') }}">About Me</a></li>
-              <li><a href="{{ url_for('services') }}">Services</a></li>
-              <li class="active"><a href="{{ url_for('works') }}">Works</a></li>
+              <li><a href="{{ url_for('services') }}">Skills</a></li>
+              <li><a href="{{ url_for('works') }}">Projects</a></li>
               <li><a href="{{ url_for('contact') }}">Contact</a></li>
             </ul>
           </div>
-          <div class="col-md-6 d-none d-md-block mr-auto">
+          <div class="col-md-5 d-none d-md-block mr-auto">
             <div class="tweet d-flex">
-              <span class="bi bi-twitter text-white mt-2 mr-3"></span>
               <div>
-                <p>
+                <h1 id="tagline">
                   <em
-                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quisquam necessitatibus incidunt ut officiis explicabo
-                    inventore. <br />
-                    <a href="#">t.co/v82jsk</a></em
+                    >Engineering Intelligent Solutions from Complex Data
+                    Landscapes.</em
                   >
-                </p>
+                </h1>
               </div>
             </div>
-          </div>
-          <div class="col-md-4 d-none d-md-block">
-            <h3>Hire Me</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              necessitatibus incidunt ut officiisexplicabo inventore. <br />
-              <a href="#">myemail@gmail.com</a>
-            </p>
           </div>
         </div>
       </div>
@@ -118,9 +107,9 @@
         <div class="container">
           <div class="row mb-5 align-items-center">
             <div class="col-md-12 col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
-              <h2>Hey, I'm Johan Stanworth</h2>
+              <h2>Hey, I'm Kevin Ayers</h2>
               <p class="mb-0">
-                Freelance Creative &amp; Professional Graphics Designer
+                Machine Learning Specialist &amp; Computer Science Graduate
               </p>
             </div>
             <div
@@ -130,10 +119,10 @@
             >
               <div id="filters" class="filters">
                 <a href="#" data-filter="*" class="active">All</a>
-                <a href="#" data-filter=".web">Web</a>
-                <a href="#" data-filter=".design">Design</a>
-                <a href="#" data-filter=".branding">Branding</a>
-                <a href="#" data-filter=".photography">Photography</a>
+                <a href="#" data-filter=".web">Machine Learning</a>
+                <a href="#" data-filter=".design">Data Analysis</a>
+                <a href="#" data-filter=".branding">Research Projects</a>
+                <a href="#" data-filter=".photography">Data Engineering</a>
               </div>
             </div>
           </div>
@@ -151,7 +140,7 @@
                 </div>
                 <img
                   class="img-fluid"
-                  src="{{ url_for('static', filename='img/img_1.jpg') }}"
+                  src="{{ url_for('static', filename='img/robot.webp') }}"
                 />
               </a>
             </div>
@@ -163,7 +152,7 @@
                 </div>
                 <img
                   class="img-fluid"
-                  src="{{ url_for('static', filename='img/img_2.jpg') }}"
+                  src="{{ url_for('static', filename='img/robot_2.webp') }}"
                 />
               </a>
             </div>
@@ -175,7 +164,7 @@
                 </div>
                 <img
                   class="img-fluid"
-                  src="{{ url_for('static', filename='img/img_3.jpg') }}"
+                  src="{{ url_for('static', filename='img/robot_3.webp') }}"
                 />
               </a>
             </div>
@@ -187,7 +176,7 @@
                 </div>
                 <img
                   class="img-fluid"
-                  src="{{ url_for('static', filename='img/img_4.jpg') }}"
+                  src="{{ url_for('static', filename='img/robot_4.webp') }}"
                 />
               </a>
             </div>
@@ -199,7 +188,7 @@
                 </div>
                 <img
                   class="img-fluid"
-                  src="{{ url_for('static', filename='img/img_5.jpg') }}"
+                  src="{{ url_for('static', filename='img/robot_5.webp') }}"
                 />
               </a>
             </div>
@@ -211,13 +200,14 @@
                 </div>
                 <img
                   class="img-fluid"
-                  src="{{ url_for('static', filename='img/img_6.jpg') }}"
+                  src="{{ url_for('static', filename='img/robot_6.webp') }}"
                 />
               </a>
             </div>
           </div>
         </div>
       </section>
+
       <!-- End  Works Section -->
 
       <!-- ======= Testimonials Section ======= -->
@@ -233,18 +223,20 @@
                 <div class="testimonial-wrap">
                   <div class="testimonial">
                     <img
-                      src="{{ url_for('static', filename='img/person_1.jpg') }}"
+                      src="{{ url_for('static', filename='img/Jared_b.jpeg') }}"
                       alt="Image"
                       class="img-fluid"
                     />
                     <blockquote>
                       <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quisquam necessitatibus incidunt ut officiis explicabo
-                        inventore.
+                        His expertise in ML is strong, Kevin is always ready to
+                        illuminate even the most tangled concepts. Kevin's
+                        dedication and clear explanations propelled our team
+                        across the finish line, leaving us all immensely
+                        grateful for his contribution.
                       </p>
                     </blockquote>
-                    <p>&mdash; Jean Hicks</p>
+                    <p>&mdash; Jared Benedict</p>
                   </div>
                 </div>
               </div>
@@ -254,18 +246,19 @@
                 <div class="testimonial-wrap">
                   <div class="testimonial">
                     <img
-                      src="{{ url_for('static', filename='img/person_2.jpg') }}"
+                      src="{{ url_for('static', filename='img/Pelley.jpeg') }}"
                       alt="Image"
                       class="img-fluid"
                     />
                     <blockquote>
                       <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quisquam necessitatibus incidunt ut officiis explicabo
-                        inventore.
+                        Kevin is not only a great, knowledgeable teammate, but
+                        also an exceptional technical leader, who always ensured
+                        our milestones were met. Given the opportunity, I would
+                        happily work with Kevin again.
                       </p>
                     </blockquote>
-                    <p>&mdash; Chris Stanworth</p>
+                    <p>&mdash; Jarrod Pelley</p>
                   </div>
                 </div>
               </div>
@@ -285,15 +278,19 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <p class="mb-1">
-              &copy; Copyright MyPortfolio. All Rights Reserved
-            </p>
+            <i class="bi bi-person-circle"></i>
+            <span>Kevin Ayers</span>
           </div>
           <div class="col-sm-6 social text-md-end">
-            <a href="#"><span class="bi bi-twitter"></span></a>
-            <a href="#"><span class="bi bi-facebook"></span></a>
-            <a href="#"><span class="bi bi-instagram"></span></a>
-            <a href="#"><span class="bi bi-linkedin"></span></a>
+            <a href="https://twitter.com/iamkevinayers"
+              ><span class="bi bi-twitter"></span
+            ></a>
+            <a href="https://github.com/AyersAuthentic"
+              ><span class="bi bi-github"></span
+            ></a>
+            <a href="https://www.linkedin.com/in/kevin-ayers/"
+              ><span class="bi bi-linkedin"></span
+            ></a>
           </div>
         </div>
       </div>

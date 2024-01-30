@@ -61,40 +61,27 @@
     <!-- ======= Navbar ======= -->
     <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
       <div class="container py-2 py-md-5">
-        <div class="row align-items-start">
-          <div class="col-md-2">
+        <div class="row align-items-center">
+          <div class="col-md-3">
             <ul class="custom-menu">
-              <li><a href="{{ url_for('index') }}">Home</a></li>
+              <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
               <li><a href="{{ url_for('about') }}">About Me</a></li>
-              <li><a href="{{ url_for('services') }}">Services</a></li>
-              <li><a href="{{ url_for('works') }}">Works</a></li>
-              <li class="active">
-                <a href="{{ url_for('contact') }}">Contact</a>
-              </li>
+              <li><a href="{{ url_for('services') }}">Skills</a></li>
+              <li><a href="{{ url_for('works') }}">Projects</a></li>
+              <li><a href="{{ url_for('contact') }}">Contact</a></li>
             </ul>
           </div>
-          <div class="col-md-6 d-none d-md-block mr-auto">
+          <div class="col-md-5 d-none d-md-block mr-auto">
             <div class="tweet d-flex">
-              <span class="bi bi-twitter text-white mt-2 mr-3"></span>
               <div>
-                <p>
+                <h1 id="tagline">
                   <em
-                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quisquam necessitatibus incidunt ut officiis explicabo
-                    inventore. <br />
-                    <a href="#">t.co/v82jsk</a></em
+                    >Engineering Intelligent Solutions from Complex Data
+                    Landscapes.</em
                   >
-                </p>
+                </h1>
               </div>
             </div>
-          </div>
-          <div class="col-md-4 d-none d-md-block">
-            <h3>Hire Me</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              necessitatibus incidunt ut officiisexplicabo inventore. <br />
-              <a href="#">myemail@gmail.com</a>
-            </p>
           </div>
         </div>
       </div>
@@ -113,139 +100,66 @@
         </a>
       </div>
     </nav>
-
     <main id="main">
-      <section class="section pb-5">
+      <section class="section pb-5 contact-section">
         <div class="container">
-          <div class="row mb-5 align-items-end">
-            <div class="col-md-6" data-aos="fade-up">
+          <div class="row mb-5 justify-content-center">
+            <div class="col-md-6 text-center" data-aos="fade-up">
               <h2>Contact</h2>
-              <p class="mb-0">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam necessitatibus incidunt ut officiis explicabo
-                inventore.
+              <p class="mb-4">
+                Feel free to connect with me through any of the following
+                platforms.
               </p>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-md-6 mb-5 mb-md-0" data-aos="fade-up">
-              <form
-                action="forms/contact.php"
-                method="post"
-                role="form"
-                class="php-email-form"
-              >
-                <div class="row gy-3">
-                  <div class="col-md-6 form-group">
-                    <label for="name">Name</label>
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      id="name"
-                      required
-                    />
-                  </div>
-                  <div class="col-md-6 form-group">
-                    <label for="name">Email</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      id="email"
-                      required
-                    />
-                  </div>
-                  <div class="col-md-12 form-group">
-                    <label for="name">Subject</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="subject"
-                      id="subject"
-                      required
-                    />
-                  </div>
-                  <div class="col-md-12 form-group">
-                    <label for="name">Message</label>
-                    <textarea
-                      class="form-control"
-                      name="message"
-                      cols="30"
-                      rows="10"
-                      required
-                    ></textarea>
-                  </div>
-
-                  <div class="col-md-12 my-3">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">
-                      Your message has been sent. Thank you!
-                    </div>
-                  </div>
-
-                  <div class="col-md-6 mt-0 form-group">
-                    <input
-                      type="submit"
-                      class="readmore d-block w-100"
-                      value="Send Message"
-                    />
-                  </div>
-                </div>
-              </form>
-            </div>
-
-            <div class="col-md-4 ml-auto order-2" data-aos="fade-up">
-              <ul class="list-unstyled">
-                <li class="mb-3">
-                  <strong class="d-block mb-1">Address</strong>
-                  <span
-                    >203 Fake St. Mountain View, San Francisco, California,
-                    USA</span
+          <div class="row justify-content-center" data-aos="fade-up">
+            <div class="col-md-6">
+              <div class="contact-info mb-3">
+                <i class="bi bi-envelope display-6"></i>
+                <h3>Email Me</h3>
+                <p>
+                  <a href="mailto:kevin@example.com"
+                    >kevin.ayers123@icloud.com</a
                   >
-                </li>
-                <li class="mb-3">
-                  <strong class="d-block mb-1">Phone</strong>
-                  <span>+1 232 3235 324</span>
-                </li>
-                <li class="mb-3">
-                  <strong class="d-block mb-1">Email</strong>
-                  <span>youremail@domain.com</span>
-                </li>
-              </ul>
+                </p>
+              </div>
+              <div class="contact-info mb-3">
+                <i class="bi bi-linkedin display-6"></i>
+                <h3>LinkedIn</h3>
+                <p>
+                  <a
+                    href="https://www.linkedin.com/in/kevin-ayers/"
+                    target="_blank"
+                    >Connect on LinkedIn</a
+                  >
+                </p>
+              </div>
+              <div class="contact-info mb-3">
+                <i class="bi bi-github display-6"></i>
+                <h3>GitHub</h3>
+                <p>
+                  <a href="https://github.com/AyersAuthentic" target="_blank"
+                    >Explore My Code</a
+                  >
+                </p>
+              </div>
+              <div class="contact-info mb-3">
+                <i class="bi bi-twitter display-6"></i>
+                <h3>Twitter</h3>
+                <p>
+                  <a href="https://twitter.com/iamkevinayers" target="_blank"
+                    >Follow Me</a
+                  >
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+
     <!-- End #main -->
-
-    <!-- ======= Footer ======= -->
-    <footer class="footer" role="contentinfo">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <p class="mb-1">
-              &copy; Copyright MyPortfolio. All Rights Reserved
-            </p>
-          </div>
-          <div class="col-sm-6 social text-md-end">
-            <a href="#"><span class="bi bi-twitter"></span></a>
-            <a href="#"><span class="bi bi-facebook"></span></a>
-            <a href="#"><span class="bi bi-instagram"></span></a>
-            <a href="#"><span class="bi bi-linkedin"></span></a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <a
-      href="#"
-      class="back-to-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
 
     <!-- Vendor JS Files -->
     <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
@@ -257,4 +171,12 @@
     <!-- Template Main JS File -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   </body>
+  <!-- ======= Footer ======= -->
+  <div id="empty-space"></div>
+  <footer class="footer" id="fixed-bottom-right" role="contentinfo">
+    <div class="name-icon">
+      <i class="bi bi-person-circle"></i>
+      <span>Kevin Ayers</span>
+    </div>
+  </footer>
 </html>
