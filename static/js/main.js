@@ -88,11 +88,24 @@
   /**
    * Porfolio isotope and filter
    */
+  /**
+   * Portfolio isotope and filter with initial limit
+   */
   window.addEventListener("load", () => {
     let portfolioContainer = select("#portfolio-grid");
     if (portfolioContainer) {
+      // Initial class addition for the first 6 items
+      const items = portfolioContainer.querySelectorAll(".item");
+      items.forEach((item, index) => {
+        if (index < 6) {
+          // Adjust number here as needed
+          item.classList.add("initial-show");
+        }
+      });
+
       let portfolioIsotope = new Isotope(portfolioContainer, {
         itemSelector: ".item",
+        filter: ".initial-show", // Start with initial-show filter
       });
 
       let portfolioFilters = select("#filters a", true);
@@ -107,8 +120,10 @@
           });
           this.classList.add("active");
 
+          const filterValue = this.getAttribute("data-filter");
           portfolioIsotope.arrange({
-            filter: this.getAttribute("data-filter"),
+            // Remove initial-show filter when a filter is selected
+            filter: filterValue === "*" ? ".initial-show" : filterValue,
           });
           portfolioIsotope.on("arrangeComplete", function () {
             AOS.refresh();
@@ -118,6 +133,38 @@
       );
     }
   });
+
+  //Previous Javascript
+  // window.addEventListener("load", () => {
+  //   let portfolioContainer = select("#portfolio-grid");
+  //   if (portfolioContainer) {
+  //     let portfolioIsotope = new Isotope(portfolioContainer, {
+  //       itemSelector: ".item",
+  //     });
+
+  //     let portfolioFilters = select("#filters a", true);
+
+  //     on(
+  //       "click",
+  //       "#filters a",
+  //       function (e) {
+  //         e.preventDefault();
+  //         portfolioFilters.forEach(function (el) {
+  //           el.classList.remove("active");
+  //         });
+  //         this.classList.add("active");
+
+  //         portfolioIsotope.arrange({
+  //           filter: this.getAttribute("data-filter"),
+  //         });
+  //         portfolioIsotope.on("arrangeComplete", function () {
+  //           AOS.refresh();
+  //         });
+  //       },
+  //       true
+  //     );
+  //   }
+  // });
 
   /**
    * Testimonials slider

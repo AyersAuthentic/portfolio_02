@@ -23,6 +23,21 @@ def work_single():
     return render_template('work-single.html')
 
 
+@app.route('/project-supervised')
+def project_supervised():
+    return render_template('project-supervised.html')
+
+
+@app.route('/project-unsupervised')
+def project_unsupervised():
+    return render_template('project-unsupervised.html')
+
+
+@app.route('/project-markov')
+def project_markov():
+    return render_template('project-markov.html')
+
+
 @app.route('/works')
 def works():
     return render_template('works.html')
