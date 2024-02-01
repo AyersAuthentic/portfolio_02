@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>MyPortfolio Bootstrap Template - Work Single</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link
+      href="{{ url_for('static', filename='img/favicon.png') }}"
+      rel="icon"
+    />
+    <link
+      href="{{ url_for('static', filename='img/apple-touch-icon.png') }}"
+      rel="apple-touch-icon"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="{{ url_for('static', filename='vendor/aos/aos.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}"
+      rel="stylesheet"
+    />
+
+    <!-- Template Main CSS File -->
+    <link
+      href="{{ url_for('static', filename='css/style.css') }}"
+      rel="stylesheet"
+    />
+
+    <!-- =======================================================
+  * Template Name: MyPortfolio
+  * Updated: Jan 09 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body>
+    <!-- ======= Navbar ======= -->
+    <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
+      <div class="container py-2 py-md-5">
+        <div class="row align-items-center">
+          <div class="col-md-3">
+            <ul class="custom-menu">
+              <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
+              <li><a href="{{ url_for('about') }}">About Me</a></li>
+              <li><a href="{{ url_for('skills') }}">Skills</a></li>
+              <li><a href="{{ url_for('works') }}">Projects</a></li>
+              <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-5 d-none d-md-block mr-auto">
+            <div class="tweet d-flex">
+              <div>
+                <h1 id="tagline">
+                  <em
+                    >Engineering Intelligent Solutions from Complex Data
+                    Landscapes.</em
+                  >
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-light custom-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="{{ url_for('index') }}">MyPortfolio.</a>
+        <a
+          href="#"
+          class="burger"
+          data-bs-toggle="collapse"
+          data-bs-target="#main-navbar"
+        >
+          <span></span>
+        </a>
+      </div>
+    </nav>
+
+    <main id="main">
+      <section class="section">
+        <div class="container">
+          <div class="row mb-4 align-items-center">
+            <div class="col-md-6" data-aos="fade-up">
+              <h2>Unveiling the Shadows: COVID-19 and Mental Health</h2>
+              <p>Decoding the Mental Health Impact with Data Science</p>
+            </div>
+          </div>
+
+          <div class="row align-items-stretch">
+            <div class="col-md-6" data-aos="fade-up">
+              <!-- Replace with your project visual file path -->
+              <img
+                src="{{ url_for('static', filename='img/proj_4.png') }}"
+                alt="Project Visuals"
+                class="img-fluid"
+              />
+            </div>
+            <div
+              class="col-md-3 ml-auto"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="sticky-content">
+                <h3 class="h3">Project Overview</h3>
+                <p class="mb-4">Predictive Analytics</p>
+                <p>
+                  This investigation delves into the shadowed intersection of
+                  COVID-19's societal upheaval and mental health, utilizing
+                  advanced analytics to unearth the undercurrents of stress
+                  within the workforce. Leveraging comprehensive datasets, our
+                  team at Georgia Institute of Technology crafted a predictive
+                  model that maps the intricate dance between pandemic-induced
+                  remote work shifts and mental well-being.
+                </p>
+
+                <h4 class="h4 mb-3">My Contributions</h4>
+                <ul class="list-unstyled list-line mb-5">
+                  <li>Experiment Design</li>
+                  <li>Data Analysis</li>
+                  <li>Algorithm Implementation</li>
+                  <li>Results Interpretation</li>
+                </ul>
+                <div class="d-flex flex-row flex-wrap">
+                  <p class="me-2">
+                    <a
+                      href="https://drive.google.com/file/d/1fPoFZhb85EOmh5IPpHQXuYWdbIkoguqU/view?usp=sharing"
+                      class="readmore"
+                      >Read the Paper</a
+                    >
+                  </p>
+                  <p>
+                    <a
+                      href="https://drive.google.com/file/d/1soDtdJKV9VcoBObd3-cIv6w7UeOAowzo/view?usp=sharing"
+                      class="readmore"
+                      >View the Poster</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======= Testimonials Section ======= -->
+      <!-- Add or remove testimonials as needed -->
+      <section class="section pt-0">
+        <div class="container">
+          <div
+            class="testimonials-slider swiper"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                  <div class="testimonial">
+                    <img
+                      src="{{ url_for('static', filename='img/Jared_b.jpeg') }}"
+                      alt="Image"
+                      class="img-fluid"
+                    />
+                    <blockquote>
+                      <p>
+                        His expertise in ML is strong, Kevin is always ready to
+                        illuminate even the most tangled concepts. Kevin's
+                        dedication and clear explanations propelled our team
+                        across the finish line, leaving us all immensely
+                        grateful for his contribution.
+                      </p>
+                    </blockquote>
+                    <p>&mdash; Jared Benedict</p>
+                  </div>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                  <div class="testimonial">
+                    <img
+                      src="{{ url_for('static', filename='img/Pelley.jpeg') }}"
+                      alt="Image"
+                      class="img-fluid"
+                    />
+                    <blockquote>
+                      <p>
+                        Kevin is not only a great, knowledgeable teammate, but
+                        also an exceptional technical leader, who always ensured
+                        our milestones were met. Given the opportunity, I would
+                        happily work with Kevin again.
+                      </p>
+                    </blockquote>
+                    <p>&mdash; Jarrod Pelley</p>
+                  </div>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+              <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                  <div class="testimonial">
+                    <img
+                      src="{{ url_for('static', filename='img/Vipul.jpeg') }}"
+                      alt="Image"
+                      class="img-fluid"
+                    />
+                    <blockquote>
+                      <p>
+                        His commitment to excellence is truly commendable; he
+                        approached every challenge with a determined mindset,
+                        setting a high standard for the entire team. Kevin's
+                        collaborative spirit made him an invaluable team player.
+                        He seamlessly integrated with our group, fostering a
+                        positive and productive atmosphere.
+                      </p>
+                    </blockquote>
+                    <p>&mdash; Vipul Koti</p>
+                  </div>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- End Testimonials Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <i class="bi bi-person-circle"></i>
+            <span>Kevin Ayers</span>
+          </div>
+          <div class="col-sm-6 social text-md-end">
+            <a href="https://twitter.com/iamkevinayers"
+              ><span class="bi bi-twitter"></span
+            ></a>
+            <a href="https://github.com/AyersAuthentic"
+              ><span class="bi bi-github"></span
+            ></a>
+            <a href="https://www.linkedin.com/in/kevin-ayers/"
+              ><span class="bi bi-linkedin"></span
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/php-email-form/validate.js') }}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>

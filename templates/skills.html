@@ -58,7 +58,7 @@
             <ul class="custom-menu">
               <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
               <li><a href="{{ url_for('about') }}">About Me</a></li>
-              <li><a href="{{ url_for('services') }}">Skills</a></li>
+              <li><a href="{{ url_for('skills') }}">Skills</a></li>
               <li><a href="{{ url_for('works') }}">Projects</a></li>
               <li><a href="{{ url_for('contact') }}">Contact</a></li>
             </ul>
@@ -179,8 +179,8 @@
                 <h4 class="h4 mb-2">Algorithm Design</h4>
                 <p>
                   Developing efficient algorithms to tackle computational
-                  problems. My work includes creating custom solutions for
-                  bioinformatics analysis and image processing.
+                  problems. My work includes creating custom solutions for path
+                  evaluation and image processing.
                 </p>
                 <ul class="list-unstyled list-line">
                   <li>Customized algorithmic problem solutions</li>
@@ -248,11 +248,35 @@
                 </div>
               </div>
               <!-- End testimonial item -->
+              <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                  <div class="testimonial">
+                    <img
+                      src="{{ url_for('static', filename='img/Vipul.jpeg') }}"
+                      alt="Image"
+                      class="img-fluid"
+                    />
+                    <blockquote>
+                      <p>
+                        His commitment to excellence is truly commendable; he
+                        approached every challenge with a determined mindset,
+                        setting a high standard for the entire team. Kevin's
+                        collaborative spirit made him an invaluable team player.
+                        He seamlessly integrated with our group, fostering a
+                        positive and productive atmosphere.
+                      </p>
+                    </blockquote>
+                    <p>&mdash; Vipul Koti</p>
+                  </div>
+                </div>
+              </div>
+              <!-- End testimonial item -->
             </div>
             <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
+
       <!-- End Testimonials Section -->
     </main>
     <!-- End #main -->

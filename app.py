@@ -13,9 +13,9 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/services')
-def services():
-    return render_template('services.html')
+@app.route('/skills')
+def skills():
+    return render_template('skills.html')
 
 
 @app.route('/work-single')
@@ -36,6 +36,31 @@ def project_unsupervised():
 @app.route('/project-markov')
 def project_markov():
     return render_template('project-markov.html')
+
+
+@app.route('/project-cdata')
+def project_cdata():
+    return render_template('project-cdata.html')
+
+
+@app.route('/project-magent')
+def project_magent():
+    return render_template('project-magent.html')
+
+
+@app.route('/project-multi-modal')
+def project_multi_modal():
+    return render_template('project-multi-modal.html')
+
+
+@app.route('/project-drones')
+def project_drones():
+    return render_template('project-drones.html')
+
+
+@app.route('/project-modeling')
+def project_modeling():
+    return render_template('project-modeling.html')
 
 
 @app.route('/works')

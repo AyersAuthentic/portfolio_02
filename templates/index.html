@@ -58,7 +58,7 @@
             <ul class="custom-menu">
               <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
               <li><a href="{{ url_for('about') }}">About Me</a></li>
-              <li><a href="{{ url_for('services') }}">Skills</a></li>
+              <li><a href="{{ url_for('skills') }}">Skills</a></li>
               <li><a href="{{ url_for('works') }}">Projects</a></li>
               <li><a href="{{ url_for('contact') }}">Contact</a></li>
             </ul>
@@ -113,8 +113,10 @@
                 <a href="#" data-filter="*" class="active">All</a>
                 <a href="#" data-filter=".machine-learning">Machine Learning</a>
                 <a href="#" data-filter=".data-analysis">Data Analysis</a>
-                <a href="#" data-filter=".branding">Research Projects</a>
-                <a href="#" data-filter=".photography">Data Engineering</a>
+                <a href="#" data-filter=".research-project"
+                  >Research Projects</a
+                >
+                <a href="#" data-filter=".data-engineering">Data Engineering</a>
               </div>
             </div>
           </div>
@@ -140,7 +142,10 @@
               </a>
             </div>
             <div class="item data-analysis col-sm-6 col-md-4 col-lg-4 mb-4">
-              <a href="{{ url_for('work_single') }}" class="item-wrap fancybox">
+              <a
+                href="{{ url_for('project_cdata') }}"
+                class="item-wrap fancybox"
+              >
                 <div class="work-info">
                   <h3>Predictive Analytics</h3>
                   <span>Data Analysis</span>
@@ -151,11 +156,14 @@
                 />
               </a>
             </div>
-            <div class="item branding col-sm-6 col-md-4 col-lg-4 mb-4">
-              <a href="{{ url_for('work_single') }}" class="item-wrap fancybox">
+            <div class="item research-project col-sm-6 col-md-4 col-lg-4 mb-4">
+              <a
+                href="{{ url_for('project_magent') }}"
+                class="item-wrap fancybox"
+              >
                 <div class="work-info">
-                  <h3>Cocooil</h3>
-                  <span>Branding</span>
+                  <h3>Multi-Agent</h3>
+                  <span>Deep Learning</span>
                 </div>
                 <img
                   class="img-fluid"
@@ -163,11 +171,14 @@
                 />
               </a>
             </div>
-            <div class="item design col-sm-6 col-md-4 col-lg-4 mb-4">
-              <a href="{{ url_for('work_single') }}" class="item-wrap fancybox">
+            <div class="item research-project col-sm-6 col-md-4 col-lg-4 mb-4">
+              <a
+                href="{{ url_for('project_multi_modal') }}"
+                class="item-wrap fancybox"
+              >
                 <div class="work-info">
-                  <h3>Nike Shoe</h3>
-                  <span>Design</span>
+                  <h3>Multi-Model Language Models</h3>
+                  <span>Deep Learning</span>
                 </div>
                 <img
                   class="img-fluid"
@@ -175,11 +186,14 @@
                 />
               </a>
             </div>
-            <div class="item photography col-sm-6 col-md-4 col-lg-4 mb-4">
-              <a href="{{ url_for('work_single') }}" class="item-wrap fancybox">
+            <div class="item research-project col-sm-6 col-md-4 col-lg-4 mb-4">
+              <a
+                href="{{ url_for('project_drones') }}"
+                class="item-wrap fancybox"
+              >
                 <div class="work-info">
-                  <h3>Kitchen Sink</h3>
-                  <span>Photography</span>
+                  <h3>Drone-SLAM</h3>
+                  <span>Robotics</span>
                 </div>
                 <img
                   class="img-fluid"
@@ -187,11 +201,14 @@
                 />
               </a>
             </div>
-            <div class="item branding col-sm-6 col-md-4 col-lg-4 mb-4">
-              <a href="{{ url_for('work_single') }}" class="item-wrap fancybox">
+            <div class="item data-engineering col-sm-6 col-md-4 col-lg-4 mb-4">
+              <a
+                href="{{ url_for('project_modeling') }}"
+                class="item-wrap fancybox"
+              >
                 <div class="work-info">
-                  <h3>Amazon</h3>
-                  <span>brandingn</span>
+                  <h3>Modeling</h3>
+                  <span>Data Engineering</span>
                 </div>
                 <img
                   class="img-fluid"
@@ -372,8 +389,8 @@
               <h4 class="h4 mb-2">Algorithm Design</h4>
               <p class="mb-3">
                 Developing efficient algorithms to tackle computational
-                problems. My work includes creating custom solutions for
-                bioinformatics analysis and image processing.
+                problems. My work includes creating custom solutions for path
+                evaluation and image processing.
               </p>
               <ul class="list-unstyled list-line">
                 <li>Customized algorithmic problem solutions</li>
@@ -437,6 +454,29 @@
                       </p>
                     </blockquote>
                     <p>&mdash; Jarrod Pelley</p>
+                  </div>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+              <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                  <div class="testimonial">
+                    <img
+                      src="{{ url_for('static', filename='img/Vipul.jpeg') }}"
+                      alt="Image"
+                      class="img-fluid"
+                    />
+                    <blockquote>
+                      <p>
+                        His commitment to excellence is truly commendable; he
+                        approached every challenge with a determined mindset,
+                        setting a high standard for the entire team. Kevin's
+                        collaborative spirit made him an invaluable team player.
+                        He seamlessly integrated with our group, fostering a
+                        positive and productive atmosphere.
+                      </p>
+                    </blockquote>
+                    <p>&mdash; Vipul Koti</p>
                   </div>
                 </div>
               </div>

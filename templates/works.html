@@ -66,7 +66,7 @@
             <ul class="custom-menu">
               <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
               <li><a href="{{ url_for('about') }}">About Me</a></li>
-              <li><a href="{{ url_for('services') }}">Skills</a></li>
+              <li><a href="{{ url_for('skills') }}">Skills</a></li>
               <li><a href="{{ url_for('works') }}">Projects</a></li>
               <li><a href="{{ url_for('contact') }}">Contact</a></li>
             </ul>
@@ -118,11 +118,13 @@
               data-aos-delay="100"
             >
               <div id="filters" class="filters">
-                <a href="#" data-filter="*" class="active">All</a>
-                <a href="#" data-filter=".web">Machine Learning</a>
-                <a href="#" data-filter=".design">Data Analysis</a>
-                <a href="#" data-filter=".branding">Research Projects</a>
-                <a href="#" data-filter=".photography">Data Engineering</a>
+                <a href="#" data-filter=".all" class="active">All</a>
+                <a href="#" data-filter=".machine-learning">Machine Learning</a>
+                <a href="#" data-filter=".data-analysis">Data Analysis</a>
+                <a href="#" data-filter=".research-project"
+                  >Research Projects</a
+                >
+                <a href="#" data-filter=".data-engineering">Data Engineering</a>
               </div>
             </div>
           </div>
@@ -132,11 +134,16 @@
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <div class="item web col-sm-6 col-md-4 col-lg-4 mb-4">
-              <a href="{{ url_for('work_single') }}" class="item-wrap fancybox">
+            <div
+              class="item machine-learning all col-sm-6 col-md-4 col-lg-4 mb-4"
+            >
+              <a
+                href="{{ url_for('project_supervised') }}"
+                class="item-wrap fancybox"
+              >
                 <div class="work-info">
-                  <h3>Boxed Water</h3>
-                  <span>Web</span>
+                  <h3>Supervised</h3>
+                  <span>Machine Learning</span>
                 </div>
                 <img
                   class="img-fluid"
@@ -144,11 +151,14 @@
                 />
               </a>
             </div>
-            <div class="item photography col-sm-6 col-md-4 col-lg-4 mb-4">
-              <a href="{{ url_for('work_single') }}" class="item-wrap fancybox">
+            <div class="item data-analysis all col-sm-6 col-md-4 col-lg-4 mb-4">
+              <a
+                href="{{ url_for('project_cdata') }}"
+                class="item-wrap fancybox"
+              >
                 <div class="work-info">
-                  <h3>Build Indoo</h3>
-                  <span>Photography</span>
+                  <h3>Predictive Analytics</h3>
+                  <span>Data Analysis</span>
                 </div>
                 <img
                   class="img-fluid"
@@ -156,11 +166,16 @@
                 />
               </a>
             </div>
-            <div class="item branding col-sm-6 col-md-4 col-lg-4 mb-4">
-              <a href="{{ url_for('work_single') }}" class="item-wrap fancybox">
+            <div
+              class="item research-project all col-sm-6 col-md-4 col-lg-4 mb-4"
+            >
+              <a
+                href="{{ url_for('project_magent') }}"
+                class="item-wrap fancybox"
+              >
                 <div class="work-info">
-                  <h3>Cocooil</h3>
-                  <span>Branding</span>
+                  <h3>Multi-Agent</h3>
+                  <span>Deep Learning</span>
                 </div>
                 <img
                   class="img-fluid"
@@ -168,11 +183,16 @@
                 />
               </a>
             </div>
-            <div class="item design col-sm-6 col-md-4 col-lg-4 mb-4">
-              <a href="{{ url_for('work_single') }}" class="item-wrap fancybox">
+            <div
+              class="item research-project all col-sm-6 col-md-4 col-lg-4 mb-4"
+            >
+              <a
+                href="{{ url_for('project_multi_modal') }}"
+                class="item-wrap fancybox"
+              >
                 <div class="work-info">
-                  <h3>Nike Shoe</h3>
-                  <span>Design</span>
+                  <h3>Multi-Model Language Models</h3>
+                  <span>Deep Learning</span>
                 </div>
                 <img
                   class="img-fluid"
@@ -180,11 +200,16 @@
                 />
               </a>
             </div>
-            <div class="item photography col-sm-6 col-md-4 col-lg-4 mb-4">
-              <a href="{{ url_for('work_single') }}" class="item-wrap fancybox">
+            <div
+              class="item research-project all col-sm-6 col-md-4 col-lg-4 mb-4"
+            >
+              <a
+                href="{{ url_for('project_drones') }}"
+                class="item-wrap fancybox"
+              >
                 <div class="work-info">
-                  <h3>Kitchen Sink</h3>
-                  <span>Photography</span>
+                  <h3>Drone-SLAM</h3>
+                  <span>Robotics</span>
                 </div>
                 <img
                   class="img-fluid"
@@ -192,15 +217,54 @@
                 />
               </a>
             </div>
-            <div class="item branding col-sm-6 col-md-4 col-lg-4 mb-4">
-              <a href="{{ url_for('work_single') }}" class="item-wrap fancybox">
+            <div
+              class="item data-engineering all col-sm-6 col-md-4 col-lg-4 mb-4"
+            >
+              <a
+                href="{{ url_for('project_modeling') }}"
+                class="item-wrap fancybox"
+              >
                 <div class="work-info">
-                  <h3>Amazon</h3>
-                  <span>brandingn</span>
+                  <h3>Modeling</h3>
+                  <span>Data Engineering</span>
                 </div>
                 <img
                   class="img-fluid"
                   src="{{ url_for('static', filename='img/robot_6.webp') }}"
+                />
+              </a>
+            </div>
+            <div
+              class="item machine-learning all col-sm-6 col-md-4 col-lg-4 mb-4"
+            >
+              <a
+                href="{{ url_for('project_unsupervised') }}"
+                class="item-wrap fancybox"
+              >
+                <div class="work-info">
+                  <h3>Unsupervised</h3>
+                  <span>Machine Learning</span>
+                </div>
+                <img
+                  class="img-fluid"
+                  src="{{ url_for('static', filename='img/robot_7.webp') }}"
+                />
+              </a>
+            </div>
+            <div
+              class="item machine-learning all col-sm-6 col-md-4 col-lg-4 mb-4"
+            >
+              <a
+                href="{{ url_for('project_markov') }}"
+                class="item-wrap fancybox"
+              >
+                <div class="work-info">
+                  <h3>Markov</h3>
+                  <span>Machine Learning</span>
+                </div>
+                <img
+                  class="img-fluid"
+                  src="{{ url_for('static', filename='img/robot_8.webp') }}"
                 />
               </a>
             </div>
@@ -259,6 +323,29 @@
                       </p>
                     </blockquote>
                     <p>&mdash; Jarrod Pelley</p>
+                  </div>
+                </div>
+              </div>
+              <!-- End testimonial item -->
+              <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                  <div class="testimonial">
+                    <img
+                      src="{{ url_for('static', filename='img/Vipul.jpeg') }}"
+                      alt="Image"
+                      class="img-fluid"
+                    />
+                    <blockquote>
+                      <p>
+                        His commitment to excellence is truly commendable; he
+                        approached every challenge with a determined mindset,
+                        setting a high standard for the entire team. Kevin's
+                        collaborative spirit made him an invaluable team player.
+                        He seamlessly integrated with our group, fostering a
+                        positive and productive atmosphere.
+                      </p>
+                    </blockquote>
+                    <p>&mdash; Vipul Koti</p>
                   </div>
                 </div>
               </div>
