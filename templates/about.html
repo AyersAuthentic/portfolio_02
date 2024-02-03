@@ -10,12 +10,25 @@
 
     <!-- Favicons -->
     <link
-      href="{{ url_for('static', filename='img/favicon.png') }}"
-      rel="icon"
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}"
     />
     <link
-      href="{{ url_for('static', filename='img/apple-touch-icon.png') }}"
-      rel="apple-touch-icon"
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}"
+    />
+    <link
+      rel="manifest"
+      href="{{ url_for('static', filename='favicon/site.webmanifest') }}"
     />
 
     <!-- Google Fonts -->
@@ -128,7 +141,12 @@
                 future together!
               </p>
               <p>
-                <a href="#" class="readmore" download>Download my Resume</a>
+                <a
+                  href="https://drive.google.com/file/d/19iyQ0zWSNM6uyihDxULz6EVzYtwl2-TT/view?usp=sharing"
+                  class="readmore"
+                  download
+                  >Download my Resume</a
+                >
               </p>
             </div>
           </div>
