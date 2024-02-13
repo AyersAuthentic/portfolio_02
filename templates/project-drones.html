@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-2JD1VQK1K1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-2JD1VQK1K1");
+    </script>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -60,21 +74,6 @@
       href="{{ url_for('static', filename='css/style.css') }}"
       rel="stylesheet"
     />
-
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-2JD1VQK1K1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-2JD1VQK1K1");
-    </script>
   </head>
 
   <body>
@@ -248,30 +247,6 @@
                         collaborative spirit made him an invaluable team player.
                         He seamlessly integrated with our group, fostering a
                         positive and productive atmosphere.
-                      </p>
-                    </blockquote>
-                    <p>&mdash; Vipul Koti</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-              <!-- Begin testimonial item -->
-              <div class="swiper-slide">
-                <div class="testimonial-wrap">
-                  <div class="testimonial">
-                    <img
-                      src="{{ url_for('static', filename='img/clive.jpeg') }}"
-                      alt="Image"
-                      class="img-fluid"
-                    />
-                    <blockquote>
-                      <p>
-                        Excuse me for using a sports metaphor but Kevin was like
-                        Michael Jordan to our dream team. He has an incredible
-                        grasp for ML and a good understanding of what it takes
-                        to succeed in the field. His unique ability to
-                        communicate and his commitment and determination
-                        inspired us to do our best work.
                       </p>
                     </blockquote>
                     <p>&mdash; Vipul Koti</p>
