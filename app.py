@@ -63,6 +63,11 @@ def project_modeling():
     return render_template('project-modeling.html')
 
 
+@app.route('/project-data-pipeline')
+def project_data_pipeline():
+    return render_template('project-data-pipeline.html')
+
+
 @app.route('/works')
 def works():
     return render_template('works.html')

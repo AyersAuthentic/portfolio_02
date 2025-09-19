@@ -1,597 +1,453 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-2JD1VQK1K1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
 
-      gtag("config", "G-2JD1VQK1K1");
-    </script>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2JD1VQK1K1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-    <title>Kevin Ayers</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
+    gtag("config", "G-2JD1VQK1K1");
+  </script>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <!-- Favicons -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}"
-    />
-    <link
-      rel="manifest"
-      href="{{ url_for('static', filename='favicon/site.webmanifest') }}"
-    />
+  <title>Kevin Ayers</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet"
-    />
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}" />
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}" />
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}" />
+  <link rel="manifest" href="{{ url_for('static', filename='favicon/site.webmanifest') }}" />
 
-    <!-- Vendor CSS Files -->
-    <link
-      href="{{ url_for('static', filename='vendor/aos/aos.css') }}"
-      rel="stylesheet"
-    />
-    <link
-      href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}"
-      rel="stylesheet"
-    />
-    <link
-      href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}"
-      rel="stylesheet"
-    />
-    <link
-      href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}"
-      rel="stylesheet"
-    />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
 
-    <!-- Template Main CSS File -->
-    <link
-      href="{{ url_for('static', filename='css/style.css') }}"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- ======= Navbar ======= -->
-    <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
-      <div class="container py-2 py-md-5">
-        <div class="row align-items-center">
-          <div class="col-md-3">
-            <ul class="custom-menu">
-              <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
-              <li><a href="{{ url_for('about') }}">About Me</a></li>
-              <li><a href="{{ url_for('skills') }}">Skills</a></li>
-              <li><a href="{{ url_for('works') }}">Projects</a></li>
-              <li><a href="{{ url_for('contact') }}">Contact</a></li>
-            </ul>
-          </div>
-          <div class="col-md-5 d-none d-md-block mr-auto">
-            <div class="tweet d-flex">
-              <div>
-                <h1 id="tagline">
-                  <em
-                    >Engineering Intelligent Solutions from Complex Data
-                    Landscapes.</em
-                  >
-                </h1>
-              </div>
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet" />
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ======= Navbar ======= -->
+  <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
+    <div class="container py-2 py-md-5">
+      <div class="row align-items-center">
+        <div class="col-md-3">
+          <ul class="custom-menu">
+            <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About Me</a></li>
+            <li><a href="{{ url_for('skills') }}">Skills</a></li>
+            <li><a href="{{ url_for('works') }}">Projects</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-5 d-none d-md-block mr-auto">
+          <div class="tweet d-flex">
+            <div>
+              <h1 id="tagline">
+                <em>Engineering Intelligent Solutions from Complex Data
+                  Landscapes.</em>
+              </h1>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <nav class="navbar navbar-light custom-navbar">
+  <nav class="navbar navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="{{ url_for('index') }}">K.</a>
+      <a href="#" class="burger" data-bs-toggle="collapse" data-bs-target="#main-navbar">
+        <span></span>
+      </a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- ======= Works Section ======= -->
+    <section class="section site-portfolio">
       <div class="container">
-        <a class="navbar-brand" href="{{ url_for('index') }}">K.</a>
-        <a
-          href="#"
-          class="burger"
-          data-bs-toggle="collapse"
-          data-bs-target="#main-navbar"
-        >
-          <span></span>
-        </a>
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12 col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
+            <h2>Hey, I'm Kevin Ayers</h2>
+            <p class="mb-0">
+              Machine Learning Specialist &amp; Computer Science Graduate
+            </p>
+          </div>
+          <div class="col-md-12 col-lg-6 text-start text-lg-end" data-aos="fade-up" data-aos-delay="100">
+            <div id="filters" class="filters">
+              <a href="#" data-filter="*" class="active">All</a>
+              <a href="#" data-filter=".data-engineering">Data Engineering</a>
+              <a href="#" data-filter=".machine-learning">Machine Learning</a>
+              <a href="#" data-filter=".data-analysis">Data Analysis</a>
+              <a href="#" data-filter=".research-project">Research Projects</a>
+            </div>
+          </div>
+        </div>
+        <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
+          <div class="item machine-learning col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="{{ url_for('project_supervised') }}" class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Supervised</h3>
+                <span>Machine Learning</span>
+              </div>
+              <img class="img-fluid" src="{{ url_for('static', filename='img/robot.webp') }}" />
+            </a>
+          </div>
+          <div class="item data-engineering col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="{{ url_for('project_data_pipeline') }}" class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Data Pipeline</h3>
+                <span>Data Engineering</span>
+              </div>
+              <img class="img-fluid" src="{{ url_for('static', filename='img/robot_9.png') }}" />
+            </a>
+          </div>
+          <div class="item data-analysis col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="{{ url_for('project_cdata') }}" class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Predictive Analytics</h3>
+                <span>Data Analysis</span>
+              </div>
+              <img class="img-fluid" src="{{ url_for('static', filename='img/robot_2.webp') }}" />
+            </a>
+          </div>
+          <div class="item research-project col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="{{ url_for('project_magent') }}" class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Multi-Agent</h3>
+                <span>Deep Learning</span>
+              </div>
+              <img class="img-fluid" src="{{ url_for('static', filename='img/robot_3.webp') }}" />
+            </a>
+          </div>
+          <div class="item research-project col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="{{ url_for('project_multi_modal') }}" class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Multi-Model Language Models</h3>
+                <span>Deep Learning</span>
+              </div>
+              <img class="img-fluid" src="{{ url_for('static', filename='img/robot_4.webp') }}" />
+            </a>
+          </div>
+          <div class="item research-project col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="{{ url_for('project_drones') }}" class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Drone-SLAM</h3>
+                <span>Robotics</span>
+              </div>
+              <img class="img-fluid" src="{{ url_for('static', filename='img/robot_5.webp') }}" />
+            </a>
+          </div>
+          <div class="item data-engineering col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="{{ url_for('project_modeling') }}" class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Modeling</h3>
+                <span>Data Engineering</span>
+              </div>
+              <img class="img-fluid" src="{{ url_for('static', filename='img/robot_6.webp') }}" />
+            </a>
+          </div>
+          <div class="item machine-learning col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="{{ url_for('project_unsupervised') }}" class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Unsupervised</h3>
+                <span>Machine Learning</span>
+              </div>
+              <img class="img-fluid" src="{{ url_for('static', filename='img/robot_7.webp') }}" />
+            </a>
+          </div>
+          <div class="item machine-learning col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="{{ url_for('project_markov') }}" class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Markov</h3>
+                <span>Machine Learning</span>
+              </div>
+              <img class="img-fluid" src="{{ url_for('static', filename='img/robot_8.webp') }}" />
+            </a>
+          </div>
+        </div>
       </div>
-    </nav>
+    </section>
+    <!-- End  Works Section -->
 
-    <main id="main">
-      <!-- ======= Works Section ======= -->
-      <section class="section site-portfolio">
-        <div class="container">
-          <div class="row mb-5 align-items-center">
-            <div class="col-md-12 col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
-              <h2>Hey, I'm Kevin Ayers</h2>
-              <p class="mb-0">
-                Machine Learning Specialist &amp; Computer Science Graduate
-              </p>
-            </div>
-            <div
-              class="col-md-12 col-lg-6 text-start text-lg-end"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div id="filters" class="filters">
-                <a href="#" data-filter="*" class="active">All</a>
-                <a href="#" data-filter=".machine-learning">Machine Learning</a>
-                <a href="#" data-filter=".data-analysis">Data Analysis</a>
-                <a href="#" data-filter=".research-project"
-                  >Research Projects</a
-                >
-                <a href="#" data-filter=".data-engineering">Data Engineering</a>
-              </div>
-            </div>
-          </div>
-          <div
-            id="portfolio-grid"
-            class="row no-gutter"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="item machine-learning col-sm-6 col-md-4 col-lg-4 mb-4">
-              <a
-                href="{{ url_for('project_supervised') }}"
-                class="item-wrap fancybox"
-              >
-                <div class="work-info">
-                  <h3>Supervised</h3>
-                  <span>Machine Learning</span>
-                </div>
-                <img
-                  class="img-fluid"
-                  src="{{ url_for('static', filename='img/robot.webp') }}"
-                />
-              </a>
-            </div>
-            <div class="item data-analysis col-sm-6 col-md-4 col-lg-4 mb-4">
-              <a
-                href="{{ url_for('project_cdata') }}"
-                class="item-wrap fancybox"
-              >
-                <div class="work-info">
-                  <h3>Predictive Analytics</h3>
-                  <span>Data Analysis</span>
-                </div>
-                <img
-                  class="img-fluid"
-                  src="{{ url_for('static', filename='img/robot_2.webp') }}"
-                />
-              </a>
-            </div>
-            <div class="item research-project col-sm-6 col-md-4 col-lg-4 mb-4">
-              <a
-                href="{{ url_for('project_magent') }}"
-                class="item-wrap fancybox"
-              >
-                <div class="work-info">
-                  <h3>Multi-Agent</h3>
-                  <span>Deep Learning</span>
-                </div>
-                <img
-                  class="img-fluid"
-                  src="{{ url_for('static', filename='img/robot_3.webp') }}"
-                />
-              </a>
-            </div>
-            <div class="item research-project col-sm-6 col-md-4 col-lg-4 mb-4">
-              <a
-                href="{{ url_for('project_multi_modal') }}"
-                class="item-wrap fancybox"
-              >
-                <div class="work-info">
-                  <h3>Multi-Model Language Models</h3>
-                  <span>Deep Learning</span>
-                </div>
-                <img
-                  class="img-fluid"
-                  src="{{ url_for('static', filename='img/robot_4.webp') }}"
-                />
-              </a>
-            </div>
-            <div class="item research-project col-sm-6 col-md-4 col-lg-4 mb-4">
-              <a
-                href="{{ url_for('project_drones') }}"
-                class="item-wrap fancybox"
-              >
-                <div class="work-info">
-                  <h3>Drone-SLAM</h3>
-                  <span>Robotics</span>
-                </div>
-                <img
-                  class="img-fluid"
-                  src="{{ url_for('static', filename='img/robot_5.webp') }}"
-                />
-              </a>
-            </div>
-            <div class="item data-engineering col-sm-6 col-md-4 col-lg-4 mb-4">
-              <a
-                href="{{ url_for('project_modeling') }}"
-                class="item-wrap fancybox"
-              >
-                <div class="work-info">
-                  <h3>Modeling</h3>
-                  <span>Data Engineering</span>
-                </div>
-                <img
-                  class="img-fluid"
-                  src="{{ url_for('static', filename='img/robot_6.webp') }}"
-                />
-              </a>
-            </div>
-            <div class="item machine-learning col-sm-6 col-md-4 col-lg-4 mb-4">
-              <a
-                href="{{ url_for('project_unsupervised') }}"
-                class="item-wrap fancybox"
-              >
-                <div class="work-info">
-                  <h3>Unsupervised</h3>
-                  <span>Machine Learning</span>
-                </div>
-                <img
-                  class="img-fluid"
-                  src="{{ url_for('static', filename='img/robot_7.webp') }}"
-                />
-              </a>
-            </div>
-            <div class="item machine-learning col-sm-6 col-md-4 col-lg-4 mb-4">
-              <a
-                href="{{ url_for('project_markov') }}"
-                class="item-wrap fancybox"
-              >
-                <div class="work-info">
-                  <h3>Markov</h3>
-                  <span>Machine Learning</span>
-                </div>
-                <img
-                  class="img-fluid"
-                  src="{{ url_for('static', filename='img/robot_8.webp') }}"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End  Works Section -->
-
-      <!-- ======= Clients Section ======= -->
-      <section class="section">
-        <div class="container">
-          <div class="row justify-content-center text-center mb-4">
-            <div class="col-5">
-              <h3 class="h3 heading">Technologies I've Worked With</h3>
-            </div>
-          </div>
-          <div class="row justify-content-center text-center mb-4">
-            <div class="col-4 col-sm-4 col-md-2">
-              <a href="#" class="client-logo">
-                <img
-                  src="{{ url_for('static', filename='img/logo-azure.png') }}"
-                  alt="Image"
-                  class="img-fluid"
-                />
-              </a>
-            </div>
-            <div class="col-4 col-sm-4 col-md-2">
-              <a href="#" class="client-logo">
-                <img
-                  src="{{ url_for('static', filename='img/logo-aws.png') }}"
-                  alt="Image"
-                  class="img-fluid"
-                />
-              </a>
-            </div>
-            <div class="col-4 col-sm-4 col-md-2">
-              <a href="#" class="client-logo">
-                <img
-                  src="{{ url_for('static', filename='img/logo-python.png') }}"
-                  alt="Image"
-                  class="img-fluid"
-                />
-              </a>
-            </div>
-            <div class="col-4 col-sm-4 col-md-2">
-              <a href="#" class="client-logo">
-                <img
-                  src="{{ url_for('static', filename='img/logo-pytorch.png') }}"
-                  alt="Image"
-                  class="img-fluid"
-                />
-              </a>
-            </div>
-            <div class="col-4 col-sm-4 col-md-2">
-              <a href="#" class="client-logo">
-                <img
-                  src="{{ url_for('static', filename='img/logo-docker.png') }}"
-                  alt="Image"
-                  class="img-fluid"
-                />
-              </a>
-            </div>
-            <div class="col-4 col-sm-4 col-md-2">
-              <a href="#" class="client-logo">
-                <img
-                  src="{{ url_for('static', filename='img/logo-post.png') }}"
-                  alt="Image"
-                  class="img-fluid"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Clients Section -->
-
-      <!-- ======= Services Section ======= -->
-      <section class="section services">
-        <div class="container">
-          <div class="row justify-content-center text-center mb-4">
-            <div class="col-5">
-              <h3 class="h3 heading">Areas of Expertise</h3>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-              <i class="bi bi-mortarboard"></i>
-              <h4 class="h4 mb-2">Machine Learning</h4>
-              <p class="mb-3">
-                Creating models that learn and make decisions from data, I excel
-                in neural networks, NLP, and deep learning, with projects like
-                image recognition and market trend analysis.
-              </p>
-              <ul class="list-unstyled list-line">
-                <li>Developed multi-model models</li>
-                <li>Built real-time pattern detection NNs</li>
-                <li>Proficient in reinforcement learning</li>
-                <li>Advanced in deep learning techniques</li>
-                <li>Refined feature engineering skills</li>
-              </ul>
-            </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-              <i class="bi bi-graph-up-arrow"></i>
-              <h4 class="h4 mb-2">Data Anlaysis</h4>
-              <p class="mb-3">
-                Extracting insights from data using statistical methods and
-                Python tools such as Pandas and NumPy. I create compelling
-                visualizations to uncover and present key findings.
-              </p>
-              <ul class="list-unstyled list-line">
-                <li>Led predictive analytics projects.</li>
-                <li>Forecasted trends via data analysis.</li>
-                <li>Optimized big data workflows</li>
-                <li>Spearheaded data integrity initiatives</li>
-                <li>Pioneered advanced analytics solutions</li>
-              </ul>
-            </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-              <i class="bi bi-gear"></i>
-              <h4 class="h4 mb-2">Data Engineering</h4>
-              <p class="mb-3">
-                Building robust data infrastructures with SQL/NoSQL and big data
-                technologies like Hadoop and Spark, I enable efficient data
-                storage and real-time processing.
-              </p>
-              <ul class="list-unstyled list-line">
-                <li>Established SQL/NoSQL databases</li>
-                <li>Orchestrated Spark data pipelines</li>
-                <li>Enhanced real-time data processing</li>
-                <li>Automated data storage solutions</li>
-                <li>Streamlined data ingestion workflows</li>
-              </ul>
-            </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-              <i class="bi bi-bounding-box"></i>
-              <h4 class="h4 mb-2">Algorithm Design</h4>
-              <p class="mb-3">
-                Developing efficient algorithms to tackle computational
-                problems. My work includes creating custom solutions for path
-                evaluation and image processing.
-              </p>
-              <ul class="list-unstyled list-line">
-                <li>Customized algorithmic problem solutions</li>
-                <li>Improved image processing techniques</li>
-                <li>Optimized computational performance</li>
-                <li>Engineered scalable software algorithms</li>
-                <li>Pioneered heuristic optimization methods</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Services Section -->
-
-      <!-- ======= Testimonials Section ======= -->
-      <section class="section pt-0">
-        <div class="container">
-          <div
-            class="testimonials-slider swiper"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="testimonial-wrap">
-                  <div class="testimonial">
-                    <img
-                      src="{{ url_for('static', filename='img/Jared_b.jpeg') }}"
-                      alt="Image"
-                      class="img-fluid"
-                    />
-                    <blockquote>
-                      <p>
-                        His expertise in ML is strong, Kevin is always ready to
-                        illuminate even the most tangled concepts. Kevin's
-                        dedication and clear explanations propelled our team
-                        across the finish line, leaving us all immensely
-                        grateful for his contribution.
-                      </p>
-                    </blockquote>
-                    <p>&mdash; Jared Benedict</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-wrap">
-                  <div class="testimonial">
-                    <img
-                      src="{{ url_for('static', filename='img/Pelley.jpeg') }}"
-                      alt="Image"
-                      class="img-fluid"
-                    />
-                    <blockquote>
-                      <p>
-                        Kevin is not only a great, knowledgeable teammate, but
-                        also an exceptional technical leader, who always ensured
-                        our milestones were met. Given the opportunity, I would
-                        happily work with Kevin again.
-                      </p>
-                    </blockquote>
-                    <p>&mdash; Jarrod Pelley</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-              <div class="swiper-slide">
-                <div class="testimonial-wrap">
-                  <div class="testimonial">
-                    <img
-                      src="{{ url_for('static', filename='img/Vipul.jpeg') }}"
-                      alt="Image"
-                      class="img-fluid"
-                    />
-                    <blockquote>
-                      <p>
-                        His commitment to excellence is truly commendable; he
-                        approached every challenge with a determined mindset,
-                        setting a high standard for the entire team. Kevin's
-                        collaborative spirit made him an invaluable team player.
-                        He seamlessly integrated with our group, fostering a
-                        positive and productive atmosphere.
-                      </p>
-                    </blockquote>
-                    <p>&mdash; Vipul Koti</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-              <!-- Begin testimonial item -->
-              <div class="swiper-slide">
-                <div class="testimonial-wrap">
-                  <div class="testimonial">
-                    <img
-                      src="{{ url_for('static', filename='img/clive.jpeg') }}"
-                      alt="Image"
-                      class="img-fluid"
-                    />
-                    <blockquote>
-                      <p>
-                        Excuse me for using a sports metaphor but Kevin was like
-                        Michael Jordan to our dream team. He has an incredible
-                        grasp for ML and a good understanding of what it takes
-                        to succeed in the field. His unique ability to
-                        communicate and his commitment and determination
-                        inspired us to do our best work.
-                      </p>
-                    </blockquote>
-                    <p>&mdash; Clivens LaGuerre</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-              <!-- Begin testimonial item -->
-              <div class="swiper-slide">
-                <div class="testimonial-wrap">
-                  <div class="testimonial">
-                    <img
-                      src="{{ url_for('static', filename='img/eric_nagel.jpeg') }}"
-                      alt="Image"
-                      class="img-fluid"
-                    />
-                    <blockquote>
-                      <p>
-                        He consistently showcased leadership skills, building
-                        out a plan for our project, working with team members to
-                        utilize their skills, and making sure that everything on
-                        our project roadmap was completed and successful.
-                      </p>
-                    </blockquote>
-                    <p>&mdash; Eric Nagel</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- End Testimonials Section -->
-    </main>
-    <!-- End #main -->
-
-    <!-- ======= Footer ======= -->
-    <footer class="footer" role="contentinfo">
+    <!-- ======= Clients Section ======= -->
+    <section class="section">
       <div class="container">
+        <div class="row justify-content-center text-center mb-4">
+          <div class="col-5">
+            <h3 class="h3 heading">Technologies I've Worked With</h3>
+          </div>
+        </div>
+        <div class="row justify-content-center text-center mb-4">
+          <div class="col-4 col-sm-4 col-md-2">
+            <a href="#" class="client-logo">
+              <img src="{{ url_for('static', filename='img/logo-azure.png') }}" alt="Image" class="img-fluid" />
+            </a>
+          </div>
+          <div class="col-4 col-sm-4 col-md-2">
+            <a href="#" class="client-logo">
+              <img src="{{ url_for('static', filename='img/logo-aws.png') }}" alt="Image" class="img-fluid" />
+            </a>
+          </div>
+          <div class="col-4 col-sm-4 col-md-2">
+            <a href="#" class="client-logo">
+              <img src="{{ url_for('static', filename='img/logo-python.png') }}" alt="Image" class="img-fluid" />
+            </a>
+          </div>
+          <div class="col-4 col-sm-4 col-md-2">
+            <a href="#" class="client-logo">
+              <img src="{{ url_for('static', filename='img/logo-pytorch.png') }}" alt="Image" class="img-fluid" />
+            </a>
+          </div>
+          <div class="col-4 col-sm-4 col-md-2">
+            <a href="#" class="client-logo">
+              <img src="{{ url_for('static', filename='img/logo-docker.png') }}" alt="Image" class="img-fluid" />
+            </a>
+          </div>
+          <div class="col-4 col-sm-4 col-md-2">
+            <a href="#" class="client-logo">
+              <img src="{{ url_for('static', filename='img/logo-post.png') }}" alt="Image" class="img-fluid" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Clients Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section class="section services">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-4">
+          <div class="col-5">
+            <h3 class="h3 heading">Areas of Expertise</h3>
+          </div>
+        </div>
         <div class="row">
-          <div class="col-sm-6">
-            <i class="bi bi-person-circle"></i>
-            <span>Kevin Ayers</span>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <i class="bi bi-mortarboard"></i>
+            <h4 class="h4 mb-2">Machine Learning</h4>
+            <p class="mb-3">
+              Creating models that learn and make decisions from data, I excel
+              in neural networks, NLP, and deep learning, with projects like
+              image recognition and market trend analysis.
+            </p>
+            <ul class="list-unstyled list-line">
+              <li>Developed multi-model models</li>
+              <li>Built real-time pattern detection NNs</li>
+              <li>Proficient in reinforcement learning</li>
+              <li>Advanced in deep learning techniques</li>
+              <li>Refined feature engineering skills</li>
+            </ul>
           </div>
-          <div class="col-sm-6 social text-md-end">
-            <a href="https://twitter.com/iamkevinayers"
-              ><span class="bi bi-twitter"></span
-            ></a>
-            <a href="https://github.com/AyersAuthentic"
-              ><span class="bi bi-github"></span
-            ></a>
-            <a href="https://www.linkedin.com/in/kevin-ayers/"
-              ><span class="bi bi-linkedin"></span
-            ></a>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <i class="bi bi-graph-up-arrow"></i>
+            <h4 class="h4 mb-2">Data Anlaysis</h4>
+            <p class="mb-3">
+              Extracting insights from data using statistical methods and
+              Python tools such as Pandas and NumPy. I create compelling
+              visualizations to uncover and present key findings.
+            </p>
+            <ul class="list-unstyled list-line">
+              <li>Led predictive analytics projects.</li>
+              <li>Forecasted trends via data analysis.</li>
+              <li>Optimized big data workflows</li>
+              <li>Spearheaded data integrity initiatives</li>
+              <li>Pioneered advanced analytics solutions</li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <i class="bi bi-gear"></i>
+            <h4 class="h4 mb-2">Data Engineering</h4>
+            <p class="mb-3">
+              Building robust data infrastructures with SQL/NoSQL and big data
+              technologies like Hadoop and Spark, I enable efficient data
+              storage and real-time processing.
+            </p>
+            <ul class="list-unstyled list-line">
+              <li>Established SQL/NoSQL databases</li>
+              <li>Orchestrated Spark data pipelines</li>
+              <li>Enhanced real-time data processing</li>
+              <li>Automated data storage solutions</li>
+              <li>Streamlined data ingestion workflows</li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <i class="bi bi-bounding-box"></i>
+            <h4 class="h4 mb-2">Algorithm Design</h4>
+            <p class="mb-3">
+              Developing efficient algorithms to tackle computational
+              problems. My work includes creating custom solutions for path
+              evaluation and image processing.
+            </p>
+            <ul class="list-unstyled list-line">
+              <li>Customized algorithmic problem solutions</li>
+              <li>Improved image processing techniques</li>
+              <li>Optimized computational performance</li>
+              <li>Engineered scalable software algorithms</li>
+              <li>Pioneered heuristic optimization methods</li>
+            </ul>
           </div>
         </div>
       </div>
-    </footer>
+    </section>
+    <!-- End Services Section -->
 
-    <a
-      href="#"
-      class="back-to-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
+    <!-- ======= Testimonials Section ======= -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial">
+                  <img src="{{ url_for('static', filename='img/Jared_b.jpeg') }}" alt="Image" class="img-fluid" />
+                  <blockquote>
+                    <p>
+                      His expertise in ML is strong, Kevin is always ready to
+                      illuminate even the most tangled concepts. Kevin's
+                      dedication and clear explanations propelled our team
+                      across the finish line, leaving us all immensely
+                      grateful for his contribution.
+                    </p>
+                  </blockquote>
+                  <p>&mdash; Jared Benedict</p>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
 
-    <!-- Vendor JS Files -->
-    <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
-    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vendor/php-email-form/validate.js') }}"></script>
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial">
+                  <img src="{{ url_for('static', filename='img/Pelley.jpeg') }}" alt="Image" class="img-fluid" />
+                  <blockquote>
+                    <p>
+                      Kevin is not only a great, knowledgeable teammate, but
+                      also an exceptional technical leader, who always ensured
+                      our milestones were met. Given the opportunity, I would
+                      happily work with Kevin again.
+                    </p>
+                  </blockquote>
+                  <p>&mdash; Jarrod Pelley</p>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial">
+                  <img src="{{ url_for('static', filename='img/Vipul.jpeg') }}" alt="Image" class="img-fluid" />
+                  <blockquote>
+                    <p>
+                      His commitment to excellence is truly commendable; he
+                      approached every challenge with a determined mindset,
+                      setting a high standard for the entire team. Kevin's
+                      collaborative spirit made him an invaluable team player.
+                      He seamlessly integrated with our group, fostering a
+                      positive and productive atmosphere.
+                    </p>
+                  </blockquote>
+                  <p>&mdash; Vipul Koti</p>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+            <!-- Begin testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial">
+                  <img src="{{ url_for('static', filename='img/clive.jpeg') }}" alt="Image" class="img-fluid" />
+                  <blockquote>
+                    <p>
+                      Excuse me for using a sports metaphor but Kevin was like
+                      Michael Jordan to our dream team. He has an incredible
+                      grasp for ML and a good understanding of what it takes
+                      to succeed in the field. His unique ability to
+                      communicate and his commitment and determination
+                      inspired us to do our best work.
+                    </p>
+                  </blockquote>
+                  <p>&mdash; Clivens LaGuerre</p>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+            <!-- Begin testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial">
+                  <img src="{{ url_for('static', filename='img/eric_nagel.jpeg') }}" alt="Image" class="img-fluid" />
+                  <blockquote>
+                    <p>
+                      He consistently showcased leadership skills, building
+                      out a plan for our project, working with team members to
+                      utilize their skills, and making sure that everything on
+                      our project roadmap was completed and successful.
+                    </p>
+                  </blockquote>
+                  <p>&mdash; Eric Nagel</p>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Template Main JS File -->
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-  </body>
+    <!-- End Testimonials Section -->
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <i class="bi bi-person-circle"></i>
+          <span>Kevin Ayers</span>
+        </div>
+        <div class="col-sm-6 social text-md-end">
+          <a href="https://twitter.com/iamkevinayers"><span class="bi bi-twitter"></span></a>
+          <a href="https://github.com/AyersAuthentic"><span class="bi bi-github"></span></a>
+          <a href="https://www.linkedin.com/in/kevin-ayers/"><span class="bi bi-linkedin"></span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/php-email-form/validate.js') }}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
 </html>

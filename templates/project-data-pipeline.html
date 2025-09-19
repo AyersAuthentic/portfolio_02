@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2JD1VQK1K1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-2JD1VQK1K1");
+  </script>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Kevin Ayers</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}" />
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}" />
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}" />
+  <link rel="manifest" href="{{ url_for('static', filename='favicon/site.webmanifest') }}" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet" />
+  <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet" />
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ======= Navbar ======= -->
+  <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
+    <div class="container py-2 py-md-5">
+      <div class="row align-items-center">
+        <div class="col-md-3">
+          <ul class="custom-menu">
+            <li class="active"><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About Me</a></li>
+            <li><a href="{{ url_for('skills') }}">Skills</a></li>
+            <li><a href="{{ url_for('works') }}">Projects</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-5 d-none d-md-block mr-auto">
+          <div class="tweet d-flex">
+            <div>
+              <h1 id="tagline">
+                <em>Engineering Intelligent Solutions from Complex Data
+                  Landscapes.</em>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="{{ url_for('index') }}">K.</a>
+      <a href="#" class="burger" data-bs-toggle="collapse" data-bs-target="#main-navbar">
+        <span></span>
+      </a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-6" data-aos="fade-up">
+            <h2>End-to-End Cloud Data Platform</h2>
+            <p>An ELT Pipeline for NYC Taxi & Weather Analysis</p>
+          </div>
+        </div>
+
+        <div class="row align-items-stretch">
+          <div class="col-md-4" data-aos="fade-up">
+            <!-- Replace with your project visual file path -->
+            <img src="{{ url_for('static', filename='img/nyc_analysis.png') }}" alt="Project Visuals"
+              class="img-fluid" />
+          </div>
+          <div class="col-md-8" data-aos="fade-up" data-aos-delay="100">
+            <div class="sticky-content">
+              <h3 class="h3">Project Overview</h3>
+              <p class="mb-4">Data Engineering</p>
+              <p>
+                This project is a complete, end-to-end data platform built on AWS. It automates the ingestion,
+                transformation, and analysis of NYC taxi trip and weather data to uncover the impact of precipitation on
+                travel times.
+              </p>
+              <p>
+                The entire cloud environment was provisioned using Terraform, establishing a reproducible and
+                version-controlled infrastructure. An ELT pipeline, orchestrated by Apache Airflow, extracts raw data
+                from a public data lake and a live weather API, loading it into a Redshift data warehouse. Data is then
+                transformed, cleaned, and validated using dbt, with a suite of over 50 data quality tests to ensure
+                accuracy. The final, analysis-ready data is presented in the interactive Streamlit dashboard.
+              </p>
+
+              <h4 class="h4 mb-3">My Contributions</h4>
+              <ul class="list-unstyled list-line mb-5">
+                <li>Cloud Architecture Design (AWS & Terraform)</li>
+                <li>Modern ELT Pipeline (Airflow & dbt)</li>
+                <li>Data Quality & Testing (dbt)</li>
+                <li>Data Warehouse Performance Tuning (Redshift)</li>
+                <li>Interactive BI Dashboard (Streamlit)</li>
+              </ul>
+              <div class="d-flex flex-row flex-wrap">
+                <p class="me-2">
+                  <a href="https://nyc-taxi-pipeline-kevinayers.streamlit.app" class="readmore">Platform</a>
+                </p>
+                <p>
+                  <a href="https://github.com/AyersAuthentic/nyc-taxi-pipeline" class="readmore">Documentation</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Testimonials Section ======= -->
+    <!-- Add or remove testimonials as needed -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial">
+                  <img src="{{ url_for('static', filename='img/Jared_b.jpeg') }}" alt="Image" class="img-fluid" />
+                  <blockquote>
+                    <p>
+                      His expertise in ML is strong, Kevin is always ready to
+                      illuminate even the most tangled concepts. Kevin's
+                      dedication and clear explanations propelled our team
+                      across the finish line, leaving us all immensely
+                      grateful for his contribution.
+                    </p>
+                  </blockquote>
+                  <p>&mdash; Jared Benedict</p>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial">
+                  <img src="{{ url_for('static', filename='img/Pelley.jpeg') }}" alt="Image" class="img-fluid" />
+                  <blockquote>
+                    <p>
+                      Kevin is not only a great, knowledgeable teammate, but
+                      also an exceptional technical leader, who always ensured
+                      our milestones were met. Given the opportunity, I would
+                      happily work with Kevin again.
+                    </p>
+                  </blockquote>
+                  <p>&mdash; Jarrod Pelley</p>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial">
+                  <img src="{{ url_for('static', filename='img/Vipul.jpeg') }}" alt="Image" class="img-fluid" />
+                  <blockquote>
+                    <p>
+                      His commitment to excellence is truly commendable; he
+                      approached every challenge with a determined mindset,
+                      setting a high standard for the entire team. Kevin's
+                      collaborative spirit made him an invaluable team player.
+                      He seamlessly integrated with our group, fostering a
+                      positive and productive atmosphere.
+                    </p>
+                  </blockquote>
+                  <p>&mdash; Vipul Koti</p>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+            <!-- Begin testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial">
+                  <img src="{{ url_for('static', filename='img/clive.jpeg') }}" alt="Image" class="img-fluid" />
+                  <blockquote>
+                    <p>
+                      Excuse me for using a sports metaphor but Kevin was like
+                      Michael Jordan to our dream team. He has an incredible
+                      grasp for ML and a good understanding of what it takes
+                      to succeed in the field. His unique ability to
+                      communicate and his commitment and determination
+                      inspired us to do our best work.
+                    </p>
+                  </blockquote>
+                  <p>&mdash; Clivens LaGuerre</p>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+            <!-- Begin testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial">
+                  <img src="{{ url_for('static', filename='img/eric_nagel.jpeg') }}" alt="Image" class="img-fluid" />
+                  <blockquote>
+                    <p>
+                      He consistently showcased leadership skills, building
+                      out a plan for our project, working with team members to
+                      utilize their skills, and making sure that everything on
+                      our project roadmap was completed and successful.
+                    </p>
+                  </blockquote>
+                  <p>&mdash; Eric Nagel</p>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!-- End Testimonials Section -->
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <i class="bi bi-person-circle"></i>
+          <span>Kevin Ayers</span>
+        </div>
+        <div class="col-sm-6 social text-md-end">
+          <a href="https://twitter.com/iamkevinayers"><span class="bi bi-twitter"></span></a>
+          <a href="https://github.com/AyersAuthentic"><span class="bi bi-github"></span></a>
+          <a href="https://www.linkedin.com/in/kevin-ayers/"><span class="bi bi-linkedin"></span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/php-email-form/validate.js') }}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
